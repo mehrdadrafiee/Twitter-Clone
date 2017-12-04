@@ -21,7 +21,7 @@ export default {
   },
   createTweet: async (_, args, { user }) => {
     await requireAuth(user);
-    return Tweet.create(args)
+    return Tweet.create(args);
   },
   updateTweet: async (_, { _id, ...rest }, { user }) => {
     try {

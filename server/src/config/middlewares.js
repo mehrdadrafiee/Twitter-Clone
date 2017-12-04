@@ -43,8 +43,8 @@ export default app => {
     graphqlExpress(req => ({
       schema,
       context: {
-        user: req.user
-      }
+        user: req.user,
+      },
     })),
   );
-}
+};

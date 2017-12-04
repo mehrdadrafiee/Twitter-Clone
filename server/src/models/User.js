@@ -38,11 +38,11 @@ UserSchema.methods = {
   createToken() {
     return jwt.sign(
       {
-        _id: this._id
+        _id: this._id,
       },
-      constants.JWT_SECRET
-    )
-  }
+      constants.JWT_SECRET,
+    );
+  },
 };
 
 export default mongoose.model('User', UserSchema);
