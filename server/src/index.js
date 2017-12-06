@@ -14,12 +14,12 @@ middlewares(app);
 
 const graphQLServer = createServer(app);
 
-mocks().then(() => {
-  graphQLServer.listen(constants.PORT, err => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log(`App is listening on port: ${constants.PORT}`);
-    }
-  });
+// mocks().then(() => {
+graphQLServer.listen(constants.PORT, err => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(`App is listening on port: ${constants.PORT}`);
+  }
 });
+// });
